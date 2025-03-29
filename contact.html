@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Miskuro</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Copy the navigation from index.html -->
+    <main class="main-content">
+        <section class="contact-section">
+            <h1 class="animated-title">Let's Connect</h1>
+            
+            <div class="contact-cards">
+                <div class="contact-card discord-card">
+                    <i class="fab fa-discord"></i>
+                    <h3>Discord</h3>
+                    <p>Add me on Discord</p>
+                    <button class="discord-btn" onclick="copyDiscord()">
+                        <span class="discord-tag">LostTelsa</span>
+                        <span class="copy-text">Click to Copy</span>
+                    </button>
+                    <div class="copy-notification" id="copyNotification">Discord tag copied!</div>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fab fa-github"></i>
+                    <h3>GitHub</h3>
+                    <p>Check out my projects</p>
+                    <a href="https://github.com/miskuro" class="social-link" target="_blank">@miskuro</a>
+                </div>
+
+                <div class="contact-card">
+                    <i class="fas fa-gamepad"></i>
+                    <h3>itch.io</h3>
+                    <p>Play my games</p>
+                    <a href="https://miskuro.itch.io/" class="social-link" target="_blank">@miskuro</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script>
+        function copyDiscord() {
+            navigator.clipboard.writeText('LostTelsa');
+            const notification = document.getElementById('copyNotification');
+            notification.classList.add('show');
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 2000);
+        }
+    </script>
+</body>
+</html>
